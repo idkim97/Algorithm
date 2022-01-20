@@ -33,56 +33,56 @@ int main() {
 				temp = tet[i][j] + tet[i + 1][j] + tet[i + 2][j] + tet[i + 3][j];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 1 && j <= m - 1) { // 네모
+			if (i <= n - 1 && j <= m - 1) { // ㅁ
 				temp = tet[i][j] + tet[i][j + 1] + tet[i + 1][j] + tet[i + 1][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 2 && j <= m - 1) { // 니은자 
+			if (i <= n - 2 && j <= m - 1) { // └
 				temp = tet[i][j] + tet[i + 1][j] + tet[i + 2][j] + tet[i + 2][j + 1];
 				if (max < temp) max = temp;
 			}
 
-			if (i <= n - 1 && j <= m - 2) { // 기역자
+			if (i <= n - 1 && j <= m - 2) { // ┌
 				temp = tet[i][j] + tet[i][j + 1] + tet[i][j + 2] + tet[i + 1][j];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 2 && j <= m - 1) { // 기역자
+			if (i <= n - 2 && j <= m - 1) { // ┐
 				temp = tet[i][j] + tet[i][j + 1] + tet[i + 1][j + 1] + tet[i + 2][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i >= 2 && j <= m - 2) { // ___ㅣ
+			if (i >= 2 && j <= m - 2) { // ┘
 				temp = tet[i][j] + tet[i][j + 1] + tet[i][j + 2] + tet[i - 1][j + 2];
 				if (max < temp) max = temp;
 			}
-			if (i >= 3 && j <= m - 1) { // 니은자 대칭
+			if (i >= 3 && j <= m - 1) { // ┘
 				temp = tet[i][j] + tet[i][j + 1] + tet[i - 1][j + 1] + tet[i - 2][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 1 && j <= m - 2) { // 기역자 대칭
+			if (i <= n - 1 && j <= m - 2) { // ┐
 				temp = tet[i][j] + tet[i][j + 1] + tet[i][j + 2] + tet[i + 1][j + 2];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 2 && j <= m - 1) { // 기역자 대칭
+			if (i <= n - 2 && j <= m - 1) { // ┌
 				temp = tet[i][j] + tet[i + 1][j] + tet[i + 2][j] + tet[i][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 1 && j <= m - 2) { // 기역자 대칭
+			if (i <= n - 1 && j <= m - 2) { // ㄴ
 				temp = tet[i][j] + tet[i + 1][j] + tet[i + 1][j + 1] + tet[i + 1][j + 2];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 2 && j <= m - 1) { // ㅣㅡㅣ
+			if (i <= n - 2 && j <= m - 1) { // └┐
 				temp = tet[i][j] + tet[i + 1][j] + tet[i + 1][j + 1] + tet[i + 2][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i >= 2 && j <= m - 1) { // ㅡㅣㅡ
+			if (i >= 2 && j <= m - 1) { // 
 				temp = tet[i][j] + tet[i][j + 1] + tet[i - 1][j + 1] + tet[i - 1][j + 2];
 				if (max < temp) max = temp;
 			}
-			if (i >= 3 && j <= m - 1) { // ㅣㅡㅣ
+			if (i >= 3 && j <= m - 1) { // ┌┘
 				temp = tet[i][j] + tet[i - 1][j] + tet[i - 1][j + 1] + tet[i - 2][j + 1];
 				if (max < temp) max = temp;
 			}
-			if (i <= n - 1 && j <= m - 1) { // ㅡㅣㅡ
+			if (i <= n - 1 && j <= m - 1) { // ㄱㄴ
 				temp = tet[i][j] + tet[i][j + 1] + tet[i + 1][j + 1] + tet[i + 1][j + 2];
 				if (max < temp) max = temp;
 			}
