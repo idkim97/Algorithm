@@ -8,10 +8,16 @@ public class น้มุ11718 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String str="";
-				
-		while((str = br.readLine())!=null) {
-			System.out.println(str);
+		String str = br.readLine();
+		int count=0;
+		
+		for(int i=0;i<str.length();i++) {
+			if(count==10) {
+				System.out.print("\n");
+				count=0;
+			}
+			System.out.print(str.charAt(i));
+			count++;
 		}
 		
 	}
