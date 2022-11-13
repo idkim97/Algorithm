@@ -24,19 +24,16 @@ public class น้มุ4949 {
 				else if (str.charAt(i) == ')') {
 					if (stack.empty() || stack.peek() != '(') {
 						stack.push(str.charAt(i));
-
 						break;
 					}
 
 					else
 						stack.pop();
-
 				}
 
 				else if (str.charAt(i) == ']') {
 					if (stack.empty() || stack.peek() != '[') {
 						stack.push(str.charAt(i));
-
 						break;
 					}
 					else
