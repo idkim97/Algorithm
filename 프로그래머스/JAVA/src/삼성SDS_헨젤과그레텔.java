@@ -57,15 +57,22 @@ public class »ï¼ºSDS_ÇîÁ©°ú±×·¹ÅÚ {
 			System.out.print("#"+count+" ");
 			System.out.print(map[n-1][m-1]-1 + " ");
 			System.out.println(calculate(distance));
-			
-			
+//			System.out.println(dis);
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++) {
-					System.out.print(distance[i][j]+" ");
+					System.out.print(map[i][j]+" ");
 				}
 				System.out.println();
 			}
-			System.out.println();
+			
+			
+//			for(int i=0;i<n;i++) {
+//				for(int j=0;j<m;j++) {
+//					System.out.print(distance[i][j]+" ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
 			count++;
 		}
 
@@ -85,13 +92,15 @@ public class »ï¼ºSDS_ÇîÁ©°ú±×·¹ÅÚ {
 				dis=calculate(distance);
 			}
 			
-			for(int i=0;i<n;i++) {
-				for(int j=0;j<m;j++) {
-					System.out.print(distance[i][j]+" ");
-				}
-				System.out.println();
-			}
-			System.out.println();
+//			for(int i=0;i<n;i++) {
+//				for(int j=0;j<m;j++) {
+//					System.out.print(distance[i][j]+" ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
+			
+			
 			//int temp = calculate(distance);
 			//System.out.println("temp : " + temp);
 			//if(temp<dis) dis=temp;
