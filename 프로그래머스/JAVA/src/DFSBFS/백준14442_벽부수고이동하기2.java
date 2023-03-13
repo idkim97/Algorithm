@@ -55,7 +55,7 @@ public class 백준14442_벽부수고이동하기2 {
 	}
 	
 	public static void bfs() {
-		Queue<Pair> q = new LinkedList<Pair>();
+		Queue<Pair> q = new LinkedList<>();
 		q.offer(new Pair(0,0,0,1));
 		visited[0][0][0]=true;
 		
