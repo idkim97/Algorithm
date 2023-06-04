@@ -1,0 +1,10 @@
+package 문자열;
+
+import java.io.IOException;
+
+public class 백준2675 {
+
+	public static void main(String[] args) throws IOException{
+		
+	}
+}

@@ -1,0 +1,9 @@
+package 문자열;
+
+import java.io.IOException;
+
+public class 백준9251 {
+	public static void main(String[] args) throws IOException {
+		
+	}
+}
