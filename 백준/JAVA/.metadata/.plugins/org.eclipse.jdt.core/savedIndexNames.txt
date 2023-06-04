@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+C:\Users\user\Desktop\Yeoun Su\github\Algorithm\น้มุ\JAVA\.metadata\.plugins\org.eclipse.jdt.core
-3064073269.index
-1865797976.index
-1547515390.index
-1393164717.index

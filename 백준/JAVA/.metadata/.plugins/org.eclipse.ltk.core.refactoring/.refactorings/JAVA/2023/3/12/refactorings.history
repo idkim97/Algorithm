@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;DFSBFS.백준16954_움직이는미로탈춫ㄹ&apos; to &apos;백준16954_움직이는미로탈출&apos;&#x0D;&#x0A;- Original project: &apos;JAVA&apos;&#x0D;&#x0A;- Original element: &apos;DFSBFS.백준16954_움직이는미로탈춫ㄹ&apos;&#x0D;&#x0A;- Renamed element: &apos;DFSBFS.백준16954_움직이는미로탈출&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;백준16954_움직이는미로탈춫ㄹ&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;DFSBFS{백준16954_움직이는미로탈춫ㄹ.java[백준16954_움직이는미로탈춫ㄹ" matchStrategy="1" name="백준16954_움직이는미로탈출" qualified="false" references="true" similarDeclarations="false" stamp="1679555566457" textual="false" version="1.0"/>
-</session>

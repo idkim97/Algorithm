@@ -1,7 +1,0 @@
-package 문자열;
-
-public class 백준8958 {
-	public static void main(String[] args) {
-		
-	}
-}
