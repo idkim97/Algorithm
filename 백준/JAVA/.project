@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>JAVA</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/algorithm/백준10829_차이를최대로.java</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%B1%EC%A4%8010829_%EC%B0%A8%EC%9D%B4%EB%A5%BC%EC%B5%9C%EB%8C%80%EB%A1%9C.java</locationURI>
+		</link>
+		<link>
+			<name>src/algorithm/백준10972_다음순열.java</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%B1%EC%A4%8010972_%EB%8B%A4%EC%9D%8C%EC%88%9C%EC%97%B4.java</locationURI>
+		</link>
+		<link>
+			<name>src/algorithm/백준10973_이전순열.java</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%B1%EC%A4%8010973_%EC%9D%B4%EC%A0%84%EC%88%9C%EC%97%B4.java</locationURI>
+		</link>
+		<link>
+			<name>src/algorithm/백준10974_모든순열.java</name>
+			<type>1</type>
+			<locationURI>PARENT-5-PROJECT_LOC/%EB%B0%B1%EC%A4%8010974_%EB%AA%A8%EB%93%A0%EC%88%9C%EC%97%B4.java</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
