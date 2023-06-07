@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class ¹éÁØ10972_´ÙÀ½¼ø¿­ {
+public class ë°±ì¤€10972_ë‹¤ìŒìˆœì—´ {
 
 
 	public static void main(String[] args) throws IOException {

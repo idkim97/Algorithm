@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class ¹éÁØ10974_¸ðµç¼ø¿­ {
+public class ë°±ì¤€10974_ëª¨ë“ ìˆœì—´ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

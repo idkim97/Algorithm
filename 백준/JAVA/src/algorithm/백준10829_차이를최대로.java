@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class ¹éÁØ10829_Â÷ÀÌ¸¦ÃÖ´ë·Î{
+public class ë°±ì¤€10829_ì°¨ì´ë¥¼ìµœëŒ€ë¡œ{
 	
 	private static int maxRes = Integer.MIN_VALUE;
 

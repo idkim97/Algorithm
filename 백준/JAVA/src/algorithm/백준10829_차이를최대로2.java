@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class ¹éÁØ10829_Â÷ÀÌ¸¦ÃÖ´ë·Î2 {
+public class ë°±ì¤€10829_ì°¨ì´ë¥¼ìµœëŒ€ë¡œ2 {
 	
 	private static int[] nums;
 	private static int n;

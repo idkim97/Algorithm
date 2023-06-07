@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class ¹éÁØ10971_¿ÜÆÇ¿ø¼øÈ¸2 {
+public class ë°±ì¤€10971_ì™¸íŒì›ìˆœíšŒ2 {
 
 	private static int[][] arr;
 	private static int n;
@@ -45,12 +45,12 @@ public class ¹éÁØ10971_¿ÜÆÇ¿ø¼øÈ¸2 {
 			int min = 0;
 			for (int i = 0; i < nums.length - 1; i++) {
 				if (arr[permu[i]][permu[i + 1]] == 0) {
-                    return; // 0À¸·Î °¡´Â °æ·Î°¡ ¾øÀ¸¸é Á¾·á
+                    return; // 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 }
 				min += arr[permu[i]][permu[i + 1]];
 			}
 			if (arr[permu[n - 1]][permu[0]] == 0) {
-                return; // ¸¶Áö¸· µµ½Ã¿¡¼­ Ã¹ µµ½Ã·Î °¡´Â °æ·Î°¡ ¾øÀ¸¸é Á¾·á
+                return; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ Ã¹ ï¿½ï¿½ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
 			min += arr[permu[n - 1]][permu[0]];
 			res = Math.min(res, min);
