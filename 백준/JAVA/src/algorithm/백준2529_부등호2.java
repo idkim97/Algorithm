@@ -3,7 +3,7 @@ package algorithm;
 import java.io.*;
 import java.util.*;
 
-public class 백준2529_부등호 {
+public class 백준2529_부등호2 {
 	
 	private static int num;
 	private static char[] boo;
@@ -18,7 +18,7 @@ public class 백준2529_부등호 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		num = Integer.parseInt(br.readLine());
 		boo = new char[num];
-		arr = new int[num+1];
+		arr = new int[10];
 		visited = new boolean[num+1];
 		nextPermu = new int[num+1];
 		
@@ -28,28 +28,41 @@ public class 백준2529_부등호 {
 		}
 		
 		//num입력받은 만큼 시작 arr 설정
-		for(int i=0;i<num+1;i++) {
+		for(int i=0;i<=9;i++) {
 			arr[i] = i;
 		}
 		
 		//0123..num까지의 배열의 다음순열로 부등호 체크
-		dfs(0,arr);
+		for(int i=0;i<10-num;i++) {
+			int[] temp = new int[num+1];
+			for(int k=0;k<num+1;k++) {
+				temp[k] = i+k;
+			}
+			dfs(0,temp);
+
+		}
 		
-//		System.out.println(max);
-//		System.out.println(min);
+
+		System.out.println(max);
+		String minstr = Long.toString(min);
+		if(minstr.length()<num+1) {
+			minstr = "0" + minstr;
+		}
+		System.out.println(minstr);
 	}
 	
 	public static void dfs(int depth, int[] arr) {
 		if(depth==num+1) {
 			// 부등호 체크
-			for(int i=0;i<nextPermu.length;i++) {
-				System.out.print(nextPermu[i]);
-			}
-			System.out.println();
+			
 			boolean flag = check(nextPermu);
 			String str = "";
 			if(flag) {
 				// nextPermu의 값과 min,max비교
+//				for(int i=0;i<nextPermu.length;i++) {
+//					System.out.print(nextPermu[i]);
+//				}
+//				System.out.println();
 				for(int i=0;i<nextPermu.length;i++) {
 					str += Integer.toString(nextPermu[i]);
 				}
@@ -63,6 +76,11 @@ public class 백준2529_부등호 {
 			return;
 		}
 		
+//		for(int temp : arr) {
+//			System.out.print(temp);
+//		}
+//		System.out.println();
+		
 		for(int i=0;i<arr.length;i++) {
 			if(!visited[i]) {
 				visited[i] = true;
@@ -74,6 +92,12 @@ public class 백준2529_부등호 {
 	}
 	
 	public static boolean check(int[] nextPermu) {
+		
+//		for(int i=0;i<nextPermu.length;i++) {
+//			System.out.print(nextPermu[i]);
+//		}
+//		System.out.println();
+		
 		for(int i=0;i<boo.length;i++) {
 			if(boo[i]=='>') {
 				if(nextPermu[i]>nextPermu[i+1]) {
