@@ -33,11 +33,11 @@ public class 백준2580_스도쿠 {
         }
 
 
-        dfs(0);
+        sudoku(0);
 
     }
 
-    public static void dfs(int depth){
+    public static void sudoku(int depth){
         if(depth==cnt){
             for(int i=0;i<9;i++){
                 for(int j=0;j<9;j++){
@@ -52,7 +52,7 @@ public class 백준2580_스도쿠 {
         for (int i = 1; i <= 9; i++) {
             map[list.get(depth).x][list.get(depth).y] = i;
             if(check(list.get(depth))){
-                dfs(depth+1);
+                sudoku(depth+1);
             }
             if(flag) return;
 
