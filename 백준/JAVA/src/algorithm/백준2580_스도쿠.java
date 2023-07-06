@@ -58,6 +58,12 @@ public class 백준2580_스도쿠 {
 
         }
         map[list.get(depth).x][list.get(depth).y] = 0;
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                System.out.print(map[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 
     public static boolean check(Pair p){
