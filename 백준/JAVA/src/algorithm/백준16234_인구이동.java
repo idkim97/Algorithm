@@ -39,10 +39,19 @@ public class 백준16234_인구이동 {
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                bfs(i, j);
+        boolean flag = true;
+
+        while(flag){
+            flag = false;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (!visited[i][j]) {
+                        bfs(i, j); // bfs 호출
+                        flag |= check(); // flag 갱신
+                    }
+                }
             }
+            visited = new boolean[n][n];
         }
 
         System.out.println(res);
@@ -53,8 +62,10 @@ public class 백준16234_인구이동 {
     public static void bfs(int x1, int y1) {
         Queue<Pair> q = new LinkedList<>();
         q.offer(new Pair(x1, y1));
+        visited = new boolean[n][n];
         visited[x1][y1] = true;
         int sum = 0, cnt = 0;
+        boolean flag = false;
 
         while (!q.isEmpty()) {
             Pair p = q.poll();
@@ -68,10 +79,12 @@ public class 백준16234_인구이동 {
                     int temp = Math.abs(map[x][y] - map[nx][ny]);
                     if (!visited[nx][ny] && temp >= l && temp <= r) {
                         visited[nx][ny] = true;
+                        flag = true;
                         q.offer(new Pair(nx, ny));
                     }
                 }
             }
+
         }
 
         for (int i = 0; i < n; i++) {
@@ -85,17 +98,20 @@ public class 백준16234_인구이동 {
 
         int temp = sum / cnt;
 
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (visited[i][j]) {
                     map[i][j] = temp;
                 }
                 visited[i][j] = false;
-                System.out.print(map[i][j] + " ");
+                if (flag) System.out.print(map[i][j] + " ");
             }
             System.out.println();
         }
-        res++;
+        System.out.println();
+
+        if (flag) res++;
 
 
     }
@@ -107,7 +123,7 @@ public class 백준16234_인구이동 {
             for (int j = 0; j < n - 1; j++) {
                 int temp = Math.abs(map[i][j] - map[i][j + 1]);
                 int temp2 = Math.abs(map[i][j] - map[i + 1][j]);
-                if (temp >= l && temp <= r) return true;
+                if ((temp >= l && temp <= r) || (temp2 >= l && temp2 <= r)) return true;
             }
         }
         return false;
