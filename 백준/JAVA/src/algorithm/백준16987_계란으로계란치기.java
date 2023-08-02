@@ -33,7 +33,6 @@ public class 백준16987_계란으로계란치기 {
         }
 
         if (naegoo[idx] > 0) {
-            naegoo[idx]
 
         }
     }
