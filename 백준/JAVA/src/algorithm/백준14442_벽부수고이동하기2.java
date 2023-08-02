@@ -5,30 +5,36 @@ import java.util.*;
 
 public class 백준14442_벽부수고이동하기2 {
 
-    private static int[][] map;
-    private static int res = Integer.MAX_VALUE;
     private static int n,m,k;
+    private static int[][] map;
+    private static boolean[][][] visited;
     private static int[] dx = {-1,0,1,0};
     private static int[] dy = {0,1,0,-1};
+    private static int res = Integer.MAX_VALUE;
 
     public static class Pair{
         int x;
         int y;
-        Pair(int x, int y){
+        int wall;
+        int cnt;
+
+        Pair(int x, int y, int wall, int cnt){
             this.x = x;
             this.y = y;
+            this.wall = wall;
+            this.cnt = cnt;
         }
     }
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken());
         map = new int[n][m];
-
+        visited = new boolean[n][m][k+1];
 
         for(int i=0;i<n;i++){
             String s = br.readLine();
@@ -37,63 +43,45 @@ public class 백준14442_벽부수고이동하기2 {
             }
         }
 
-        dfs(0, map);
-
-
-        if(res!=Integer.MAX_VALUE)
-        System.out.println(res);
-        else System.out.println("-1");
-
+        int result = bfs();
+        System.out.println(result);
 
     }
 
-    public static void dfs(int wall, int[][] newMap){
-        if(wall==k){
-            bfs(newMap);
-            return;
-        }
-
-        for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
-                if(newMap[i][j]==1){
-                    newMap[i][j]=0;
-                    dfs(wall+1, newMap);
-                    newMap[i][j] = 1;
-                }
-            }
-        }
-    }
-
-    public static void bfs(int[][] map){
+    public static int bfs(){
         Queue<Pair> q = new LinkedList<>();
-        q.offer(new Pair(0,0));
-        boolean[][] visited = new boolean[n][m];
-        visited[0][0]=true;
-        int[][] result = new int[n][m];
+        q.offer(new Pair(0,0,0,0));
 
         while(!q.isEmpty()){
             Pair p = q.poll();
-            int x = p.x;
-            int y = p.y;
+            int curx = p.x;
+            int cury = p.y;
+            int curwall = p.wall;
+            int curcnt = p.cnt;
 
-            if(x==n-1 && y==m-1){
-                res = Math.min(result[x][y]+1,res);
-
-                return;
+            if(curx==n-1 && cury==m-1){
+                return curcnt+1;
             }
 
             for(int i=0;i<4;i++){
-                int nx = x+dx[i];
-                int ny = y+dy[i];
+                int nx = curx + dx[i];
+                int ny = cury + dy[i];
                 if(nx>=0 && nx<n && ny>=0 && ny<m){
-                    if(!visited[nx][ny] && map[nx][ny]==0){
-                        visited[nx][ny] = true;
-                        q.offer(new Pair(nx,ny));
-                        result[nx][ny] = result[x][y]+1;
+                    // 벽을 안부수는 경우
+                    if(map[nx][ny]==0 && !visited[nx][ny][curwall]){
+                        visited[nx][ny][curwall] = true;
+                        q.offer(new Pair(nx,ny,curwall,curcnt+1));
                     }
+                    else if(map[nx][ny]==1 && curwall<k && !visited[nx][ny][curwall+1]){
+                        visited[nx][ny][curwall+1] = true;
+                        q.offer(new Pair(nx,ny,curwall+1,curcnt+1));
+                    }
+
                 }
             }
         }
+
+        return -1;
     }
 
 }
